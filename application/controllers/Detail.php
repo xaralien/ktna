@@ -19,8 +19,26 @@ class Detail extends CI_Controller
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
-    public function index()
+    function __construct()
     {
+        // require_once APPPATH . 'third_party/PhpSpreadsheet/src/Bootstrap.php';
+        parent::__construct();
+        $this->load->model('Artikel_Management_m', 'artikel_management');
+        // if (!$this->session->userdata('user_logged_in')) {
+        // 	redirect('auth'); // Redirect to the 'autentic' page
+        // }
+    }
+    public function artikel($id = null)
+    {
+
+        if ($id) {
+
+            $this->artikel_management->update_count($id);
+            $data['artikel'] = $this->artikel_management->get_id_edit($id);
+        } else {
+            $data['artikel'] = null;
+        }
+        $data['recent'] = $this->artikel_management->artikel_recent();
 
         $data['content']     = 'webview/Detail/Detail_view';
         $data['content_js'] = 'webview/Detail/Detail_js';

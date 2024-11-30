@@ -46,7 +46,7 @@
                         <!-- Logo -->
                         <div class="col-xl-3 col-lg-3 col-md-3">
                             <div class="logo">
-                                <a href="#"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
+                                <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9">
@@ -63,14 +63,14 @@
                         <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                             <!-- sticky -->
                             <div class="sticky-logo">
-                                <a href="#"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
+                                <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="<?= base_url('') ?>">Home</a></li>
-                                        <li><a href="<?= base_url('kategori') ?>">Category</a></li>
+                                        <!-- <li><a href="<?= base_url('kategori') ?>">Category</a></li> -->
                                         <!-- <li><a href="<?= base_url('about') ?>">About</a></li> -->
                                         <li><a href="#">About</a>
                                             <ul class="submenu">
