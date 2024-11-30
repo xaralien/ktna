@@ -37,7 +37,7 @@
 
 <!-- Jquery Plugins, main Jquery -->
 <script src="<?= base_url('assets/') ?>js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
+<script src="<?= base_url('assets/') ?>js/main.js"></script>
 
 </body>
 

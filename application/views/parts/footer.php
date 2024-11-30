@@ -12,25 +12,24 @@
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales Suscipit mauris pede for sectetuer.</p>
+                                    <!-- <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales Suscipit mauris pede for sectetuer.</p> -->
                                 </div>
                             </div>
                             <!-- social -->
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <!-- <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a> -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
                     <div class="single-footer-caption mt-60">
                         <div class="footer-tittle">
                             <h4>Newsletter</h4>
                             <p>Heaven fruitful doesn't over les idays appear creeping</p>
-                            <!-- Form -->
-                            <div class="footer-form">
+                            ] <div class="footer-form">
                                 <div id="mc_embed_signup">
                                     <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
                                         method="get" class="subscribe_form relative mail_part">
@@ -64,7 +63,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -78,8 +77,7 @@
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </script> All rights reserved</p>
                         </div>
                     </div>
                     <div class="col-lg-6">

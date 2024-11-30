@@ -26,9 +26,9 @@ class Artikel_Management extends CI_Controller
         $this->load->model('Artikel_Management_m', 'artikel_management');
         $this->load->helper(array('form', 'url'));
         $this->load->library('upload');
-        // if (!$this->session->userdata('user_logged_in')) {
-        // 	redirect('auth'); // Redirect to the 'autentic' page
-        // }
+        if (!$this->session->userdata('user_logged_in')) {
+            redirect('auth'); // Redirect to the 'autentic' page
+        }
     }
     public function ajax_list()
     {
@@ -44,8 +44,8 @@ class Artikel_Management extends CI_Controller
             $row = array();
             $row[] = $no;
             $row[] = $cat->category;
-            $row[] = '<img width="100px" src="' . $path . '">';
             $row[] = $cat->title;
+            $row[] = '<img width="100px" src="' . $path . '">';
             $row[] = $cat->tanggal;
             $row[] = $cat->view_count;
             // $row[] = $cat->halaman_page;

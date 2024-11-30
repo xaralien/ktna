@@ -62,6 +62,13 @@
                             </a>
                         </li>
                         <li
+                            class="sidebar-item <?php if ($uri == 'youtube_management') echo 'active' ?>">
+                            <a href="<?= base_url('youtube_management') ?>" class='sidebar-link'>
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>Youtube Management</span>
+                            </a>
+                        </li>
+                        <li
                             class="sidebar-item <?php if ($uri == 'auth/logout') echo 'active' ?>">
                             <a href="<?= base_url('auth/logout') ?>" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>

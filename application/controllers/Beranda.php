@@ -23,6 +23,7 @@ class Beranda extends CI_Controller
     {
         // require_once APPPATH . 'third_party/PhpSpreadsheet/src/Bootstrap.php';
         parent::__construct();
+        $this->load->model('Youtube_Management_m', 'youtube_management');
         $this->load->model('Artikel_Management_m', 'artikel_management');
         $this->load->helper(array('form', 'url'));
         $this->load->library('upload');
@@ -30,6 +31,7 @@ class Beranda extends CI_Controller
         // 	redirect('auth'); // Redirect to the 'autentic' page
         // }
     }
+
     public function index()
     {
         $data['artikel_trending_now_1'] = $this->artikel_management->artikel_trending_now_1();
@@ -38,6 +40,7 @@ class Beranda extends CI_Controller
         $data['artikel_sub_trending_2'] = $this->artikel_management->artikel_sub_trending_2();
         $data['artikel_weekly_topnews'] = $this->artikel_management->artikel_weekly_topnews();
         $data['artikel_latest'] = $this->artikel_management->artikel_latest();
+        $data['youtube_latest'] = $this->youtube_management->youtube_latest();
         $data['content'] = 'webview/beranda/beranda_view';
         $data['content_js'] = 'webview/beranda/beranda_js';
         $this->load->view('parts/wrapper', $data);
