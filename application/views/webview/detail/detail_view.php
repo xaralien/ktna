@@ -41,6 +41,28 @@
             /* Adjust height dynamically */
         }
     }
+
+    /* Style for images inside Summernote-rendered content */
+    p img {
+        max-width: 100%;
+        /* Ensure the image does not exceed the container's width */
+        height: auto;
+        /* Maintain aspect ratio */
+        display: block;
+        /* Remove inline-block spacing */
+        margin: 0 auto;
+        /* Center the image horizontally */
+        object-fit: cover;
+        /* Crop the image if necessary */
+    }
+
+    /* Optional: Add a maximum height if needed */
+    p img {
+        max-height: 500px;
+        /* Adjust as needed */
+        object-fit: contain;
+        /* Ensures the entire image is visible if max height is reached */
+    }
 </style>
 <section class="blog_area single-post-area section-padding">
     <div class="container">
