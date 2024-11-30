@@ -238,7 +238,7 @@
     }
     ?>
     <!-- Whats New Start -->
-    <section class="whats-news-area pt-50 pb-20">
+    <!-- <section class="whats-news-area pt-50 pb-20">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -248,24 +248,8 @@
                                 <h3><a href="<?= base_url('latest_news') ?>">Whats New</a></h3>
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-9">
-                            <div class="properties__button">
-                                <!--Nav Button  -->
-                                <!-- <nav>
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
-                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lifestyle</a>
-                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Travel</a>
-                                        <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Fashion</a>
-                                        <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Sports</a>
-                                        <a class="nav-item nav-link" id="nav-technology" data-toggle="tab" href="#nav-techno" role="tab" aria-controls="nav-contact" aria-selected="false">Technology</a>
-                                    </div>
-                                </nav> -->
-                                <!--End Nav Button  -->
-                            </div>
-                        </div>
                     </div>
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col-12">
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -301,11 +285,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Whats New End -->
     <!-- Start Youtube -->
     <div class="youtube-area video-padding">
