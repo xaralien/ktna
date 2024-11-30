@@ -40,8 +40,8 @@ class Detail extends CI_Controller
         }
         $data['recent'] = $this->artikel_management->artikel_recent();
 
-        $data['content']     = 'webview/Detail/Detail_view';
-        $data['content_js'] = 'webview/Detail/Detail_js';
+        $data['content']     = 'webview/detail/detail_view';
+        $data['content_js'] = 'webview/detail/detail_js';
         $this->load->view('parts/wrapper', $data);
     }
 }
