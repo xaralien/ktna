@@ -113,7 +113,7 @@ class Artikel_Management_m extends CI_Model
         $this->db->where('tanggal >=', date('Y-m-d', strtotime('-7 days')));
         $this->db->where('tanggal <=', date('Y-m-d')); // Optional: up to today's date
 
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(3);
         $query = $this->db->get();
         return $query->result();
@@ -122,7 +122,7 @@ class Artikel_Management_m extends CI_Model
     {
         $this->db->select('title');
         $this->db->from('artikel');
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(3);
         $query = $this->db->get();
         return $query->result();
@@ -132,8 +132,11 @@ class Artikel_Management_m extends CI_Model
         $this->db->select('*');
         $this->db->from('artikel');
 
+        // Filter for articles within the last 7 days
+        $this->db->where('tanggal >=', date('Y-m-d', strtotime('-30 days')));
+        $this->db->where('tanggal <=', date('Y-m-d')); // Optional: up to today's date
 
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(1);
         $query = $this->db->get();
         return $query->row();
@@ -143,7 +146,7 @@ class Artikel_Management_m extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('artikel');
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(1);
         $query = $this->db->get();
         return $query->row();
@@ -165,7 +168,7 @@ class Artikel_Management_m extends CI_Model
         // Exclude the article used for trending (either trending_1 or trending_2)
         $this->db->where_not_in('Id', [$trending->Id]);
 
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(3);
         $query = $this->db->get();
         return $query->result();
@@ -206,7 +209,7 @@ class Artikel_Management_m extends CI_Model
             $this->db->where_not_in('Id', $exclude_ids);
         }
 
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(5);
         $query = $this->db->get();
 
@@ -256,7 +259,7 @@ class Artikel_Management_m extends CI_Model
             $this->db->where_not_in('Id', $exclude_ids);
         }
 
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(5);
         $query = $this->db->get();
         return $query->result();

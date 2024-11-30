@@ -12,7 +12,7 @@
 <!-- Preloader Start -->
 <style>
     .logo {
-        width: 100px;
+        width: 80px;
     }
 </style>
 <header>
@@ -40,35 +40,19 @@
                     </div>
                 </div>
             </div> -->
-            <div class="header-mid d-none d-md-block">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="logo">
-                                <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-9 col-md-9">
-                            <div class="header-banner f-right ">
-                                <!-- <img src="<?= base_url('assets/') ?>img/hero/header_card.jpg" alt=""> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="header-bottom header-sticky">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                             <!-- sticky -->
-                            <div class="sticky-logo">
+                            <!-- <div class="sticky-logo">
                                 <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
-                            </div>
+                            </div> -->
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
                                 <nav>
                                     <ul id="navigation">
+                                        <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
                                         <li><a href="<?= base_url('') ?>">Home</a></li>
                                         <!-- <li><a href="<?= base_url('kategori') ?>">Category</a></li> -->
                                         <!-- <li><a href="<?= base_url('about') ?>">About</a></li> -->
