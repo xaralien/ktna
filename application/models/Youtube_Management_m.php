@@ -5,7 +5,7 @@ class Youtube_Management_m extends CI_Model
     var $table = 'youtube';
     var $column_order = array('Id', 'link', 'title', 'text', 'tanggal'); //set column field database for datatable orderable
     var $column_search = array('Id', 'link', 'title', 'text', 'tanggal'); //set column field database for datatable searchable 
-    var $order = array('youtube.Id' => 'asc'); // default order 
+    var $order = array('youtube.tanggal' => 'DESC'); // default order 
 
     function _get_datatables_query()
     {
