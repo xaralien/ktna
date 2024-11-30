@@ -86,8 +86,15 @@
                         <div class="blog_details">
                             <h2><?= $artikel->title ?>
                             </h2>
+                            <?php
+                            $tanggal = $artikel->tanggal;
+
+                            // Split into date and time using explode
+                            list($date, $time) = explode(' ', $tanggal);
+                            $formatted_date = DateTime::createFromFormat('Y-m-d', $date)->format('F j, Y'); // 
+                            ?>
                             <ul class="blog-info-link mt-3 mb-4">
-                                <li><a href="<?= base_url('kategori') ?>"><i class="fa fa-tag"></i> <?= $artikel->category ?></a></li>
+                                <li><a href="<?= base_url('kategori') ?>"><i class="fa fa-tag"></i> <?= $artikel->category ?> | <?= $formatted_date ?></a></li>
                                 <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
                             </ul>
                             <p>
