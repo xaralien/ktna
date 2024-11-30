@@ -308,9 +308,9 @@ class Artikel_Management_m extends CI_Model
         $this->db->from('artikel');
 
         // Exclude the articles that are part of trending_1, trending_2, sub_trending_1, and sub_trending_2
-        if (!empty($exclude_ids)) {
-            $this->db->where_not_in('Id', $exclude_ids);
-        }
+        // if (!empty($exclude_ids)) {
+        //     $this->db->where_not_in('Id', $exclude_ids);
+        // }
         $this->db->order_by('tanggal', 'DESC');
         $this->db->limit(6);
         $query = $this->db->get();
