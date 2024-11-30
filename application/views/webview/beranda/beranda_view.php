@@ -195,45 +195,46 @@
     <!--   Weekly-News start -->
     <?php
     if ($artikel_weekly_topnews) {
-
+        if (count($artikel_weekly_topnews) === 4) {
     ?>
-        <!--   Weekly-News start -->
-        <div class="weekly-news-area pt-50">
-            <div class="container">
-                <div class="weekly-wrapper">
-                    <!-- section Tittle -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-tittle mb-30">
-                                <h3>Weekly Top News</h3>
+            <!--   Weekly-News start -->
+            <div class="weekly-news-area pt-50">
+                <div class="container">
+                    <div class="weekly-wrapper">
+                        <!-- section Tittle -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-tittle mb-30">
+                                    <h3>Weekly Top News</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="weekly-news-active dot-style d-flex dot-style">
-                                <?php
-                                foreach ($artikel_weekly_topnews as $c) {
-                                ?>
-                                    <div class="weekly-single">
-                                        <div class="weekly-img">
-                                            <img class="cropped-weekly-img" src="<?= base_url('uploads/artikel/' . $c->thumbnail) ?>" alt="">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="weekly-news-active dot-style d-flex dot-style">
+                                    <?php
+                                    foreach ($artikel_weekly_topnews as $c) {
+                                    ?>
+                                        <div class="weekly-single">
+                                            <div class="weekly-img">
+                                                <img class="cropped-weekly-img" src="<?= base_url('uploads/artikel/' . $c->thumbnail) ?>" alt="">
+                                            </div>
+                                            <div class="weekly-caption">
+                                                <span class="color1"><?= $c->category ?></span>
+                                                <h4><a href="<?= base_url('detail/artikel/' . $c->Id) ?>"><?= $c->title ?></a></h4>
+                                            </div>
                                         </div>
-                                        <div class="weekly-caption">
-                                            <span class="color1"><?= $c->category ?></span>
-                                            <h4><a href="<?= base_url('detail/artikel/' . $c->Id) ?>"><?= $c->title ?></a></h4>
-                                        </div>
-                                    </div>
-                                <?php
-                                }
-                                ?>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     <?php
+        }
     }
     ?>
     <!-- Whats New Start -->
