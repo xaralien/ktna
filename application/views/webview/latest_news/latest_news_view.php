@@ -1,26 +1,57 @@
 <style>
-    .btn-search {
-        background: #000;
-        -moz-user-select: none;
-        text-transform: uppercase;
-        color: #fff;
+    /* Flex container for form */
+    .search-form {
+        display: flex;
+        align-items: stretch;
+        /* Ensure items are aligned properly */
+    }
+
+    /* Input field */
+    .search-form .form-control {
+        flex: 1;
+        /* Take up available space */
+        border: 1px solid #ccc;
+        /* Optional border */
+        border-right: none;
+        /* Remove border overlap with button */
+        border-radius: 4px 0 0 4px;
+        /* Rounded corners on the left */
+        height: 40px;
+        /* Uniform height */
+    }
+
+    /* Search button */
+    .search-form .btn-search {
+        background-color: gray;
+        /* Gray background */
+        color: white;
+        /* White text */
+        border: 1px solid #ccc;
+        /* Match input border */
+        border-radius: 0 4px 4px 0;
+        /* Rounded corners on the right */
+        padding: 0 15px;
+        /* Horizontal padding */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        /* Same height as input */
+        transition: background-color 0.3s ease;
+        /* Smooth color change on hover */
+    }
+
+    /* Button hover effect */
+    .search-form .btn-search:hover {
+        background-color: darkgray;
+        /* Dark gray on hover */
         cursor: pointer;
-        display: inline-block;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        line-height: 0;
-        margin-bottom: 0;
-        padding: 1px;
-        border-radius: 5px;
-        margin: 10px;
-        cursor: pointer;
-        transition: color 0.4s linear;
-        position: relative;
-        z-index: 1;
-        border: 0;
-        overflow: hidden;
+    }
+
+    /* Ensure icon is centered */
+    .search-form .btn-search .fas {
         margin: 0;
+        /* Reset icon margins */
     }
 </style>
 <main>
@@ -137,10 +168,9 @@
                             </div>
                         </div>
                         <div class="search-box">
-                            <form action="<?= site_url('latest_news') ?>" method="get">
-                                <input type="text" name="search" placeholder="Search" value="<?= htmlspecialchars($this->input->get('search') ?? '', ENT_QUOTES, 'UTF-8'); ?>">
-                                <button class="btn-search" type="submit"><i class="fas fa-search special-tag"></i>
-                                </button>
+                            <form action="<?= site_url('latest_news') ?>" method="get" class="search-form">
+                                <input class="form-control" type="text" name="search" placeholder="Search" value="<?= htmlspecialchars($this->input->get('search') ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+                                <button class="btn-search" type="submit"><i class="fas fa-search special-tag"></i></button>
                             </form>
                         </div>
                         <div class="col-lg-9 col-md-9">
@@ -203,7 +233,7 @@
                     <!-- Flow Socail -->
                     <!-- New Poster -->
                     <div class="news-poster d-none d-lg-block">
-                        <img src="<?= base_url('assets/') ?>img/news/news_card.jpg" alt="">
+                        <!-- <img src="<?= base_url('assets/') ?>img/news/news_card.jpg" alt=""> -->
                     </div>
                 </div>
             </div>

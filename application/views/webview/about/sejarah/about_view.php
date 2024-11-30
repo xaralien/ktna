@@ -79,7 +79,7 @@
                     </div>
                     <!-- New Poster -->
                     <div class="news-poster d-none d-lg-block">
-                        <img src="<?= base_url('assets/') ?>img/news/news_card.jpg" alt="">
+                        <!-- <img src="<?= base_url('assets/') ?>img/news/news_card.jpg" alt=""> -->
                     </div>
                 </div>
             </div>

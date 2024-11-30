@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9">
                             <div class="header-banner f-right ">
-                                <img src="<?= base_url('assets/') ?>img/hero/header_card.jpg" alt="">
+                                <!-- <img src="<?= base_url('assets/') ?>img/hero/header_card.jpg" alt=""> -->
                             </div>
                         </div>
                     </div>
@@ -100,13 +100,13 @@
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-4">
                             <div class="header-right-btn f-right d-none d-lg-block">
-                                <i class="fas fa-search special-tag"></i>
+                                <!-- <i class="fas fa-search special-tag"></i>
                                 <div class="search-box">
                                     <form action="#">
                                         <input type="text" placeholder="Search">
 
                                     </form>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Mobile Menu -->
