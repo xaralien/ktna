@@ -1,4 +1,33 @@
 <style>
+    .what-img {
+        width: 370px;
+        height: 350px;
+        overflow: hidden;
+        /* Hide any part of the image outside this box */
+    }
+
+    .what-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image is cropped and fits the container */
+    }
+
+    @media (max-width: 768px) {
+        .what-img {
+            width: 330px;
+            height: 307px;
+        }
+    }
+
+    /* Media Query for mobile screens */
+    @media (max-width: 768px) {
+        .trend-bottom-img {
+            width: 330px;
+            height: 220px;
+        }
+    }
+
     /* Flex container for form */
     .search-form {
         display: flex;
