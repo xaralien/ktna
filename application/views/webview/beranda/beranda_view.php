@@ -320,6 +320,7 @@
                             foreach ($youtube_latest as $yl) {
                                 $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
                                 $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+                                $youtube_id = null;
 
                                 if (preg_match($longUrlRegex, $yl->link, $matches)) {
                                     $youtube_id = $matches[count($matches) - 1];
@@ -366,6 +367,7 @@
                                 foreach ($youtube_latest as $yl) {
                                     $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
                                     $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+                                    $youtube_id = null;
 
                                     if (preg_match($longUrlRegex, $yl->link, $matches)) {
                                         $youtube_id = $matches[count($matches) - 1];
