@@ -1,4 +1,18 @@
 <style>
+    .trend-bottom-img {
+        width: 237px;
+        height: 158px;
+        overflow: hidden;
+        /* Hide anything outside the box */
+    }
+
+    .trend-bottom-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image is cropped to fit the box */
+    }
+
     .trand-right-img {
         width: 120px;
         height: 100px;
@@ -96,7 +110,7 @@
                                         <div class="col-lg-4">
                                             <div class="single-bottom mb-35">
                                                 <div class="trend-bottom-img mb-30">
-                                                    <img src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
+                                                    <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
                                                 </div>
                                                 <div class="trend-bottom-cap">
                                                     <span class="color1"><?= $a->category ?></span>
