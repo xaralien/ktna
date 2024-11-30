@@ -265,11 +265,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-12">
-                            <!-- Nav Card -->
                             <div class="tab-content" id="nav-tabContent">
-                                <!-- card one -->
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                     <div class="whats-news-caption">
                                         <div class="row">
@@ -302,9 +300,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Nav Card -->
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

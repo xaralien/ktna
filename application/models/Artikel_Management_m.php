@@ -194,7 +194,9 @@ class Artikel_Management_m extends CI_Model
 
         // Add the ID of sub-trending 1 if available
         if (!empty($sub_trending_1) && isset($sub_trending_1[0]->Id)) {
-            $exclude_ids[] = $sub_trending_1[0]->Id;
+            foreach ($sub_trending_1 as $st) {
+                $exclude_ids[] = $st->Id;
+            }
         }
 
         // Fetch sub-trending articles while excluding specified IDs
@@ -238,13 +240,17 @@ class Artikel_Management_m extends CI_Model
         }
 
         // Add sub_trending_1 ID if it exists
-        if (!empty($sub_trending_1)) {
-            $exclude_ids[] = $sub_trending_1[0]->Id; // Assuming it's an array and you want the first element
+        if (!empty($sub_trending_1) && isset($sub_trending_1[0]->Id)) {
+            foreach ($sub_trending_1 as $st) {
+                $exclude_ids[] = $st->Id;
+            }
         }
 
         // Add sub_trending_2 ID if it exists
-        if (!empty($sub_trending_2)) {
-            $exclude_ids[] = $sub_trending_2[0]->Id; // Assuming it's an array and you want the first element
+        if (!empty($sub_trending_2) && isset($sub_trending_2[0]->Id)) {
+            foreach ($sub_trending_2 as $st) {
+                $exclude_ids[] = $st->Id;
+            }
         }
 
         // Get weekly top news, ensuring it does not include trending_1, trending_2, sub_trending_1, or sub_trending_2
@@ -288,20 +294,24 @@ class Artikel_Management_m extends CI_Model
         }
 
         // Add sub_trending_1 ID if it exists
-        if (!empty($sub_trending_1)) {
-            $exclude_ids[] = $sub_trending_1[0]->Id; // Assuming it's an array and you want the first element
+        if (!empty($sub_trending_1) && isset($sub_trending_1[0]->Id)) {
+            foreach ($sub_trending_1 as $st) {
+                $exclude_ids[] = $st->Id;
+            }
         }
 
         // Add sub_trending_2 ID if it exists
-        if (!empty($sub_trending_2)) {
-            $exclude_ids[] = $sub_trending_2[0]->Id; // Assuming it's an array and you want the first element
+        if (!empty($sub_trending_2) && isset($sub_trending_2[0]->Id)) {
+            foreach ($sub_trending_2 as $st) {
+                $exclude_ids[] = $st->Id;
+            }
         }
 
-        if (!empty($weekly_top)) {
-            $exclude_ids[] = $weekly_top[0]->Id; // Assuming it's an array and you want the first element
+        if (!empty($weekly_top) && isset($weekly_top[0]->Id)) {
+            foreach ($weekly_top as $st) {
+                $exclude_ids[] = $st->Id;
+            }
         }
-
-
 
         // Get weekly top news, ensuring it does not include trending_1, trending_2, sub_trending_1, or sub_trending_2
         $this->db->select('*');
