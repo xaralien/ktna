@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dapen Bukopin</title>
+    <title>Admin KTNA</title>
 
     <link rel="shortcut icon" href="<?= base_url() ?>/assets/admin/compiled/svg/favicon.svg" type="image/x-icon">
 

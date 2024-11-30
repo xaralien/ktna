@@ -55,15 +55,15 @@
                             </a>
                         </li>
                         <li
-                            class="sidebar-item <?php if ($uri == 'artikel_management') echo 'active' ?>">
-                            <a href="<?= base_url('artikel_management') ?>" class='sidebar-link'>
+                            class="sidebar-item <?php if ($uri == 'Artikel_Management') echo 'active' ?>">
+                            <a href="<?= base_url('Artikel_Management') ?>" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span>Article Management</span>
                             </a>
                         </li>
                         <li
-                            class="sidebar-item <?php if ($uri == 'youtube_management') echo 'active' ?>">
-                            <a href="<?= base_url('youtube_management') ?>" class='sidebar-link'>
+                            class="sidebar-item <?php if ($uri == 'Youtube_Management') echo 'active' ?>">
+                            <a href="<?= base_url('Youtube_Management') ?>" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span>Youtube Management</span>
                             </a>

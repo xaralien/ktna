@@ -1,3 +1,28 @@
+<style>
+    .btn-search {
+        background: #000;
+        -moz-user-select: none;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 0;
+        margin-bottom: 0;
+        padding: 1px;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+        transition: color 0.4s linear;
+        position: relative;
+        z-index: 1;
+        border: 0;
+        overflow: hidden;
+        margin: 0;
+    }
+</style>
 <main>
     <div class="youtube-area">
         <div class="container">
@@ -108,6 +133,13 @@
                             <div class="section-tittle mb-30">
                                 <h3>Whats New</h3>
                             </div>
+                        </div>
+                        <div class="search-box">
+                            <form action="<?= site_url('latest_news') ?>" method="get">
+                                <input type="text" name="search" placeholder="Search" value="<?= htmlspecialchars($this->input->get('search') ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+                                <button class="btn-search" type="submit"><i class="fas fa-search special-tag"></i>
+                                </button>
+                            </form>
                         </div>
                         <div class="col-lg-9 col-md-9">
                             <div class="properties__button">
