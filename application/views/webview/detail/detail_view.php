@@ -11,18 +11,35 @@
         /* Optional: Add rounded corners */
     }
 
-    .feature-img .image-wrapper {
+    /* Default style for larger screens */
+    .feature-img {
         width: 750px;
-        height: 375px;
+        /* Set container width for larger screens */
+        height: auto;
+        /* Let height adjust dynamically */
         overflow: hidden;
-        position: relative;
+        /* Crop overflowing parts of the image */
+        margin: 0 auto;
+        /* Optional: Center the image horizontally */
     }
 
-    .feature-img .image-wrapper img {
+    .feature-img img {
         width: 100%;
+        /* Make the image fill the container width */
         height: 100%;
+        /* Stretch height to fit */
         object-fit: cover;
-        /* Ensures the image covers the container without distortion */
+        /* Crop the image while maintaining aspect ratio */
+    }
+
+    /* Style for smaller screens (mobile) */
+    @media (max-width: 768px) {
+        .feature-img {
+            width: 330px;
+            /* Set container width for mobile screens */
+            height: auto;
+            /* Adjust height dynamically */
+        }
     }
 </style>
 <section class="blog_area single-post-area section-padding">
