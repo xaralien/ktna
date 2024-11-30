@@ -10,6 +10,20 @@
         border-radius: 8px;
         /* Optional: Add rounded corners */
     }
+
+    .feature-img .image-wrapper {
+        width: 750px;
+        height: 375px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .feature-img .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the container without distortion */
+    }
 </style>
 <section class="blog_area single-post-area section-padding">
     <div class="container">
