@@ -29,7 +29,7 @@
                 <div class="card-header">
                     <h5 class="card-title">
                         <!-- Minimal jQuery Datatable -->
-                        <a href="<?= base_url('artikel_management/add') ?>" class="btn btn-primary">Create Article</a>
+                        <a href="<?= base_url('Artikel_Management/add') ?>" class="btn btn-primary">Create Article</a>
 
                     </h5>
                 </div>

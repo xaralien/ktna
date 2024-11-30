@@ -162,7 +162,7 @@
                                 $('#table2').DataTable().ajax.reload(); // Assuming you are using AJAX to load data
                                 $('#exampleModalScrollable').modal('hide'); // Hide the modal
                                 // location.reload();
-                                location.href = '<?= base_url('artikel_management') ?>';
+                                location.href = '<?= base_url('Artikel_Management') ?>';
 
                             }
                         },
@@ -284,7 +284,7 @@
                                 $('#table2').DataTable().ajax.reload(); // Assuming you are using AJAX to load data
                                 $('#exampleModalScrollable').modal('hide'); // Hide the modal
                                 // location.reload();
-                                location.href = '<?= base_url('artikel_management') ?>';
+                                location.href = '<?= base_url('Artikel_Management') ?>';
 
                             }
                         },

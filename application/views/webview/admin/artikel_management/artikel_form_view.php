@@ -90,7 +90,7 @@
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="submit" onclick="save_artikel()" class="btn btn-primary me-1 mb-1">Submit</button>
                                         <button type="reset" onclick="reset_artikel()" class="btn btn-light-secondary me-1 mb-1">Reset</button>
-                                        <a href="<?= base_url('artikel_management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
+                                        <a href="<?= base_url('Artikel_Management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
                                     </form>
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="submit" onclick="update_artikel()" class="btn btn-primary me-1 mb-1">Submit</button>
-                                        <a href="<?= base_url('artikel_management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
+                                        <a href="<?= base_url('Artikel_Management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
                                     </div>
                                 </div>
                             </div>

@@ -75,7 +75,7 @@
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="submit" onclick="save_youtube()" class="btn btn-primary me-1 mb-1">Submit</button>
                                         <button type="reset" onclick="reset_youtube()" class="btn btn-light-secondary me-1 mb-1">Reset</button>
-                                        <a href="<?= base_url('youtube_management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
+                                        <a href="<?= base_url('Youtube_Management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                     </form>
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="submit" onclick="update_youtube()" class="btn btn-primary me-1 mb-1">Submit</button>
-                                        <a href="<?= base_url('youtube_management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
+                                        <a href="<?= base_url('Youtube_Management') ?>" class="btn btn-warning me-1 mb-1">Back</a>
                                     </div>
                                 </div>
                             </div>
