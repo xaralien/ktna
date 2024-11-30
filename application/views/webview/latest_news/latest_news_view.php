@@ -12,21 +12,34 @@
             <div class="row">
                 <div class="col-12">
                     <div class="video-items-active">
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/CicQIuG8hBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/rIz00N40bag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/CONfhrASy44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/lq6fL2ROWf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-items text-center">
-                            <iframe src="https://www.youtube.com/embed/0VxlQlacWV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                        <?php
+                        if ($youtube_latest) {
+                            foreach ($youtube_latest as $yl) {
+                                $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+                                $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+
+                                if (preg_match($longUrlRegex, $yl->link, $matches)) {
+                                    $youtube_id = $matches[count($matches) - 1];
+                                }
+
+                                if (preg_match($shortUrlRegex, $yl->link, $matches)) {
+                                    $youtube_id = $matches[count($matches) - 1];
+                                }
+                                $link = 'https://www.youtube.com/embed/' . $youtube_id;
+                        ?>
+                                <div class="video-items text-center">
+                                    <iframe class="video-youtube" src="<?= $link ?>" frameborder="0" data-title="<?= $yl->title ?>" data-description="<?= $yl->text ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <div class="video-items text-center">
+                                <iframe src="https://www.youtube.com/embed/Bj3JNN-y7E4?si=OBsi_1GHh_GPovN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -35,46 +48,50 @@
                     <div class="col-lg-6">
                         <div class="video-caption">
                             <div class="top-caption">
-                                <span class="color1">Politics</span>
+                                <!-- <span class="color1">Politics</span> -->
                             </div>
                             <div class="bottom-caption">
-                                <h2>Welcome To The Best Model Winner Contest At Look of the year</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod ipsum dolor sit lorem ipsum dolor sit.</p>
+                                <h2 id="video-title-youtube"></h2>
+                                <p id="video-description"></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="testmonial-nav text-center">
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/CicQIuG8hBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
+                            <?php
+                            if ($youtube_latest) {
+                                foreach ($youtube_latest as $yl) {
+                                    $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+                                    $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+
+                                    if (preg_match($longUrlRegex, $yl->link, $matches)) {
+                                        $youtube_id = $matches[count($matches) - 1];
+                                    }
+
+                                    if (preg_match($shortUrlRegex, $yl->link, $matches)) {
+                                        $youtube_id = $matches[count($matches) - 1];
+                                    }
+                                    $link = 'https://www.youtube.com/embed/' . $youtube_id;
+                            ?>
+                                    <div class="single-video">
+                                        <iframe src="<?= $link ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="video-intro">
+                                            <h4><?= $yl->title ?></h4>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                            } else {
+                                ?>
+                                <div class="single-video">
+                                    <iframe src="https://www.youtube.com/embed/Bj3JNN-y7E4?si=OBsi_1GHh_GPovN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="video-intro">
+                                        <h4>Welcotme To The Best Model Winner Contest</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/rIz00N40bag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/CONfhrASy44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/lq6fL2ROWf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
-                            <div class="single-video">
-                                <iframe src="https://www.youtube.com/embed/0VxlQlacWV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="video-intro">
-                                    <h4>Welcotme To The Best Model Winner Contest</h4>
-                                </div>
-                            </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -22,6 +22,7 @@ class Latest_news extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Youtube_Management_m', 'youtube_management');
         $this->load->model('Latest_News_m', 'latest_news');
         $this->load->model('Artikel_Management_m', 'artikel_management');
         $this->load->library('pagination');
@@ -74,6 +75,8 @@ class Latest_news extends CI_Controller
 
         // Generate the pagination links
         $data['pagination'] = $this->pagination->create_links();
+
+        $data['youtube_latest'] = $this->youtube_management->youtube_latest();
 
         // Load the view
         $data['content'] = 'webview/latest_news/latest_news_view';
