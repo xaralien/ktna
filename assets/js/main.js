@@ -193,7 +193,7 @@ $('.testmonial-nav').slick({
     }
   ]
 });
-
+//Tambahan
 // Function to update video title and description
 function updateVideoInfo(slideIndex) {
   const activeSlide = $('.video-items-active .slick-slide[data-slick-index="' + slideIndex + '"] iframe');
