@@ -179,29 +179,43 @@ class Artikel_Management_m extends CI_Model
         // Get trending article 1
         $trending_1 = $this->artikel_trending_now_1();
 
-        // Get trending article 2 only if trending article 1 is empty
+        // Use trending 2 as fallback if trending 1 is empty
         if (empty($trending_1)) {
-            $trending_1 = $this->artikel_trending_now_2(); // Use trending 2 as fallback
+            $trending_1 = $this->artikel_trending_now_2();
         }
 
         // Get sub-trending article 1
         $sub_trending_1 = $this->artikel_sub_trending_1();
 
-        // Collect the IDs of articles to exclude (trending_1, trending_2, and sub_trending_1)
-        $exclude_ids = array_merge([$trending_1->Id], [$sub_trending_1[0]->Id]);
+        // Initialize the exclude_ids array
+        $exclude_ids = [];
 
-        // Get trending article 2 (for sub-trending), ensuring it does not include trending_1, trending_2, or sub_trending_1
+        // Add the ID of trending 1 if available
+        if (!empty($trending_1) && isset($trending_1->Id)) {
+            $exclude_ids[] = $trending_1->Id;
+        }
+
+        // Add the ID of sub-trending 1 if available
+        if (!empty($sub_trending_1) && isset($sub_trending_1[0]->Id)) {
+            $exclude_ids[] = $sub_trending_1[0]->Id;
+        }
+
+        // Fetch sub-trending articles while excluding specified IDs
         $this->db->select('*');
         $this->db->from('artikel');
 
-        // Exclude the articles that are part of trending_1, trending_2, and sub_trending_1
-        $this->db->where_not_in('Id', $exclude_ids);
+        // Exclude the IDs only if exclude_ids is not empty
+        if (!empty($exclude_ids)) {
+            $this->db->where_not_in('Id', $exclude_ids);
+        }
 
         $this->db->order_by('view_count', 'DESC');
         $this->db->limit(5);
         $query = $this->db->get();
+
         return $query->result();
     }
+
     public function artikel_weekly_topnews()
     {
         // Get trending article 1
