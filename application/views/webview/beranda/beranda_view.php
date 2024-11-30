@@ -13,6 +13,15 @@
         /* Ensures the image is cropped to fit the box */
     }
 
+    /* Media Query for mobile screens */
+    @media (max-width: 768px) {
+        .trend-bottom-img {
+            width: 330px;
+            height: 220px;
+        }
+    }
+
+
     .trand-right-img {
         width: 120px;
         height: 100px;
@@ -42,6 +51,13 @@
         /* Ensures the image is cropped and fits the container */
     }
 
+    @media (max-width: 768px) {
+        .weekly-img {
+            width: 330px;
+            height: 385px;
+        }
+    }
+
     .what-img {
         width: 370px;
         height: 350px;
@@ -54,6 +70,13 @@
         height: 100%;
         object-fit: cover;
         /* Ensures the image is cropped and fits the container */
+    }
+
+    @media (max-width: 768px) {
+        .what-img {
+            width: 330px;
+            height: 307px;
+        }
     }
 </style>
 <main>
