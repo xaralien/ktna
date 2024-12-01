@@ -26,6 +26,11 @@
             width: 330px;
             height: 220px;
         }
+
+        .search-box {
+            margin-left: 20%;
+            margin-bottom: 20px;
+        }
     }
 
     /* Flex container for form */
