@@ -1,4 +1,17 @@
 <style>
+    .center-content {
+        display: flex;
+        /* Enables flexbox */
+        justify-content: center;
+        /* Centers content horizontally */
+        align-items: center;
+        /* Centers content vertically */
+        height: 200px;
+        /* Ensure enough vertical space */
+        text-align: center;
+        /* Align text inside the element */
+    }
+
     .what-img {
         width: 370px;
         height: 350px;
@@ -232,26 +245,27 @@
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                     <div class="whats-news-caption">
                                         <div class="row">
-                                            <?php
-                                            if ($users_data) {
-                                                foreach ($users_data as $i) {
-                                            ?>
+                                            <?php if ($users_data) { ?>
+                                                <?php foreach ($users_data as $i) { ?>
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="single-what-news mb-100">
                                                             <div class="what-img">
-                                                                <img src="<?= base_url('uploads/artikel/') . '' . $i->thumbnail ?>" alt="">
+                                                                <img src="<?= base_url('uploads/artikel/') . $i->thumbnail ?>" alt="">
                                                             </div>
                                                             <div class="what-cap">
                                                                 <span class="color1"><?= $i->category ?></span>
-                                                                <h4><a href="<?= base_url('detail/artikel/') . '' . $i->Id ?>"><?= $i->title ?></a></h4>
+                                                                <h4><a href="<?= base_url('detail/artikel/') . $i->Id ?>"><?= $i->title ?></a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
-                                            <?php
-                                                }
-                                            }
-                                            ?>
+                                                <?php } ?>
+                                            <?php } else { ?>
+                                                <div class="col-12 center-content">
+                                                    <h4>Artikel Tidak Ditemukan</h4>
+                                                </div>
+                                            <?php } ?>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
