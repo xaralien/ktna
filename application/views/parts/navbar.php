@@ -14,6 +14,58 @@
     .logo {
         width: 80px;
     }
+
+    /* Default behavior: sticky logo stays at its original position */
+    .sticky-logo {
+        top: 0;
+        left: 0;
+        /* Hidden initially */
+        /* opacity: 0; */
+        /* Transparent initially */
+        /* Smooth appearance */
+    }
+
+    /* Only apply for web mode (desktop) */
+    @media (min-width: 768px) {
+        .sticky-logo {
+            /* position: relative; */
+            /* visibility: visible; */
+            /* Make it visible */
+            opacity: 1;
+            /* Fully opaque */
+            margin-right: 20px;
+            /* Add spacing between the logo and list items */
+            display: inline-block;
+            /* Align with list items */
+            vertical-align: middle;
+            /* Align with the text in navigation */
+            position: absolute;
+            /* visibility: hidden; */
+            /* transition: opacity 0.3s ease, visibility 0.3s ease; */
+
+        }
+
+        .main-menu nav {
+            margin-left: 60px;
+            display: flex;
+            /* Enable flexbox for alignment */
+            align-items: center;
+            /* Vertically center align items */
+        }
+
+        .main-menu ul {
+            display: flex;
+            /* Arrange list items horizontally */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-menu ul li {
+            margin-left: 15px;
+            /* Add spacing between list items */
+        }
+    }
 </style>
 <header>
     <!-- Header Start -->
@@ -45,14 +97,13 @@
                     <div class="row align-items-center">
                         <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                             <!-- sticky -->
-                            <!-- <div class="sticky-logo">
+                            <div class="sticky-logo">
                                 <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
-                            </div> -->
+                            </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <a href="<?= base_url() ?>"><img class="logo" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt=""></a>
                                         <li><a href="<?= base_url('') ?>">Home</a></li>
                                         <!-- <li><a href="<?= base_url('kategori') ?>">Category</a></li> -->
                                         <!-- <li><a href="<?= base_url('about') ?>">About</a></li> -->
