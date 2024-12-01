@@ -28,7 +28,7 @@
         }
 
         .search-box {
-            margin-left: 20%;
+            margin-left: 15%;
             margin-bottom: 20px;
         }
     }
