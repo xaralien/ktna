@@ -24,16 +24,28 @@
 
     .trand-right-img {
         width: 120px;
+        /* Container width */
         height: 100px;
+        /* Container height */
         overflow: hidden;
-        /* Hide anything outside the box */
+        /* Ensures anything outside the box is hidden */
+        position: relative;
+        /* Allows positioning of the image inside */
     }
 
     .trand-right-img img {
-        width: 100%;
+        width: auto;
+        /* Maintains the aspect ratio */
         height: 100%;
+        /* Ensures the image fills the height */
         object-fit: cover;
-        /* Ensures the image is cropped to fit the box */
+        /* Crops the image to fit the container */
+        position: absolute;
+        /* Enables precise positioning */
+        top: 0;
+        /* Aligns image to the top */
+        left: 0;
+        /* Aligns image to the left */
     }
 
     /* Adjust the size and cropping of the image to 370x440 */
