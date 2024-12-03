@@ -21,31 +21,18 @@
         }
     }
 
-
     .trand-right-img {
         width: 120px;
-        /* Container width */
         height: 100px;
-        /* Container height */
         overflow: hidden;
-        /* Ensures anything outside the box is hidden */
-        position: relative;
-        /* Allows positioning of the image inside */
+        /* Hide anything outside the box */
     }
 
     .trand-right-img img {
-        width: auto;
-        /* Maintains the aspect ratio */
+        width: 100%;
         height: 100%;
-        /* Ensures the image fills the height */
         object-fit: cover;
-        /* Crops the image to fit the container */
-        position: absolute;
-        /* Enables precise positioning */
-        top: 0;
-        /* Aligns image to the top */
-        left: 0;
-        /* Aligns image to the left */
+        /* Ensures the image is cropped to fit the box */
     }
 
     /* Adjust the size and cropping of the image to 370x440 */
