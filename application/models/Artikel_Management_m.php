@@ -162,15 +162,38 @@ class Artikel_Management_m extends CI_Model
         $this->db->select('*');
         $this->db->from('artikel');
 
+        $this->db->where('tanggal >=', date('Y-m-d', strtotime('-30 days')));
+        $this->db->where('tanggal <=', date('Y-m-d')); // Optional: up to today's date
+
         // Exclude the article used for trending (either trending_1 or trending_2)
         $this->db->where_not_in('Id', [$trending->Id]);
 
-        $this->db->order_by('tanggal', 'DESC');
+        $this->db->order_by('view_count', 'DESC');
         $this->db->limit(3);
         $query = $this->db->get();
         return $query->result();
     }
+    public function artikel_sub_trending_1_alternative()
+    {
+        $trending = $this->artikel_trending_now_1();
 
+        // Get trending article 2 only if trending article 1 is empty
+        if (empty($trending)) {
+            $trending = $this->artikel_trending_now_2(); // Use trending 2 as fallback
+        }
+
+        // Get trending article 2 (for sub-trending), ensuring it does not include trending_1
+        $this->db->select('*');
+        $this->db->from('artikel');
+
+        // Exclude the article used for trending (either trending_1 or trending_2)
+        $this->db->where_not_in('Id', [$trending->Id]);
+
+        $this->db->order_by('view_count', 'DESC');
+        $this->db->limit(3);
+        $query = $this->db->get();
+        return $query->result();
+    }
     public function artikel_sub_trending_2()
     {
         // Get trending article 1

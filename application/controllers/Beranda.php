@@ -36,6 +36,7 @@ class Beranda extends CI_Controller
     {
         $data['artikel_trending_now_1'] = $this->artikel_management->artikel_trending_now_1();
         $data['artikel_trending_now_2'] = $this->artikel_management->artikel_trending_now_2();
+        $data['artikel_sub_trending_1_alternative'] = $this->artikel_management->artikel_sub_trending_1_alternative();
         $data['artikel_sub_trending_1'] = $this->artikel_management->artikel_sub_trending_1();
         $data['artikel_sub_trending_2'] = $this->artikel_management->artikel_sub_trending_2();
         $data['artikel_weekly_topnews'] = $this->artikel_management->artikel_weekly_topnews();

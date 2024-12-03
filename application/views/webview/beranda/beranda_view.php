@@ -143,6 +143,22 @@
                                         </div>
                                     <?php
                                     }
+                                } else if ($artikel_sub_trending_1_alternative) {
+                                    foreach ($artikel_sub_trending_1 as $a) {
+                                    ?>
+                                        <div class="col-lg-4">
+                                            <div class="single-bottom mb-35">
+                                                <div class="trend-bottom-img mb-30">
+                                                    <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
+                                                </div>
+                                                <div class="trend-bottom-cap">
+                                                    <span class="color1"><?= $a->category ?></span>
+                                                    <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                    }
                                 } else {
                                     ?>
                                     <div class="col-lg-4 d-flex justify-content-center align-items-center">
