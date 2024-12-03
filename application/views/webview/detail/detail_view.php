@@ -136,7 +136,7 @@
                                 <li><a href="<?= base_url('kategori') ?>"><i class="fa fa-tag"></i> <?= $artikel->category ?> | <?= $formatted_date ?></a></li>
                                 <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
                             </ul>
-                            <p>
+                            <p style="text-align: justify;">
                                 <?= $artikel->text ?>
                             </p>
                         </div>
