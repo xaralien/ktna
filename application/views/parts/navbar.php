@@ -54,7 +54,7 @@
         }
 
         .main-menu ul {
-            display: flex;
+            /* display: flex; */
             /* Arrange list items horizontally */
             margin: 0;
             padding: 0;
