@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div> -->
-            <div class="header-bottom header-sticky">
+            <div style="height: 100px;" class="header-bottom header-sticky">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
