@@ -193,7 +193,7 @@
                                 <div class="media post_item">
                                     <img src="<?= base_url('uploads/artikel/') . '' . $r->thumbnail ?>" alt="post">
                                     <div class="media-body">
-                                        <a href="<?= base_url('detail/artikel/' . $c->Id) ?>">
+                                        <a href="<?= base_url('detail/artikel/' . $r->Id) ?>">
                                             <h3><?= $r->title ?></h3>
                                         </a>
                                         <?php
