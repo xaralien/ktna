@@ -3,8 +3,8 @@ $this->db->select('title');
 $this->db->from('artikel');
 
 // Filter for articles within the last 7 days
-$this->db->where('tanggal >=', date('Y-m-d', strtotime('-7 days')));
-$this->db->where('tanggal <=', date('Y-m-d')); // Optional: up to today's date
+// $this->db->where('tanggal >=', date('Y-m-d', strtotime('-30 days')));
+// $this->db->where('tanggal <=', date('Y-m-d')); // Optional: up to today's date
 
 $this->db->order_by('view_count', 'DESC');
 $this->db->limit(3);
