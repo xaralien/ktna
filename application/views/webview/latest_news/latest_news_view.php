@@ -247,17 +247,19 @@
                                         <div class="row">
                                             <?php if ($users_data) { ?>
                                                 <?php foreach ($users_data as $i) { ?>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="single-what-news mb-100">
-                                                            <div class="what-img">
-                                                                <img src="<?= base_url('uploads/artikel/') . $i->thumbnail ?>" alt="">
-                                                            </div>
-                                                            <div class="what-cap">
-                                                                <span class="color1"><?= $i->category ?></span>
-                                                                <h4><a href="<?= base_url('detail/artikel/') . $i->Id ?>"><?= $i->title ?></a></h4>
+                                                    <a href="<?= base_url('detail/artikel/' . $i->Id) ?>">
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <div class="single-what-news mb-100">
+                                                                <div class="what-img">
+                                                                    <img src="<?= base_url('uploads/artikel/') . $i->thumbnail ?>" alt="">
+                                                                </div>
+                                                                <div class="what-cap">
+                                                                    <span class="color1"><?= $i->category ?></span>
+                                                                    <h4><a href="<?= base_url('detail/artikel/') . $i->Id ?>"><?= $i->title ?></a></h4>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 <?php } ?>
                                             <?php } else { ?>
                                                 <div class="col-12 center-content">

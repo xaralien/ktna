@@ -98,27 +98,31 @@
                         <?php
                         if ($artikel_trending_now_1) {
                         ?>
-                            <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_1->thumbnail) ?>" alt="">
-                                    <div class="trend-top-cap">
-                                        <span><?= $artikel_trending_now_1->category ?></span>
-                                        <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>"><?= $artikel_trending_now_1->title ?></a></h2>
+                            <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>">
+                                <div class="trending-top mb-30">
+                                    <div class="trend-top-img">
+                                        <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_1->thumbnail) ?>" alt="">
+                                        <div class="trend-top-cap">
+                                            <span><?= $artikel_trending_now_1->category ?></span>
+                                            <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>"><?= $artikel_trending_now_1->title ?></a></h2>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         <?php
                         } else {
                         ?>
-                            <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_2->thumbnail) ?>" alt="">
-                                    <div class="trend-top-cap">
-                                        <span><?= $artikel_trending_now_2->category ?></span>
-                                        <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>"><?= $artikel_trending_now_2->title ?></a></h2>
+                            <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>">
+                                <div class="trending-top mb-30">
+                                    <div class="trend-top-img">
+                                        <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_2->thumbnail) ?>" alt="">
+                                        <div class="trend-top-cap">
+                                            <span><?= $artikel_trending_now_2->category ?></span>
+                                            <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>"><?= $artikel_trending_now_2->title ?></a></h2>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         <?php
                         }
                         ?>
@@ -129,33 +133,37 @@
                                 if ($artikel_sub_trending_1) {
                                     foreach ($artikel_sub_trending_1 as $a) {
                                 ?>
-                                        <div class="col-lg-4">
-                                            <div class="single-bottom mb-35">
-                                                <div class="trend-bottom-img mb-30">
-                                                    <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
-                                                </div>
-                                                <div class="trend-bottom-cap">
-                                                    <span class="color1"><?= $a->category ?></span>
-                                                    <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
+                                        <a href="<?= base_url('detail/artikel/' . $a->Id) ?>">
+                                            <div class="col-lg-4">
+                                                <div class="single-bottom mb-35">
+                                                    <div class="trend-bottom-img mb-30">
+                                                        <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
+                                                    </div>
+                                                    <div class="trend-bottom-cap">
+                                                        <span class="color1"><?= $a->category ?></span>
+                                                        <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     <?php
                                     }
                                 } else if ($artikel_sub_trending_1_alternative) {
                                     foreach ($artikel_sub_trending_1 as $a) {
                                     ?>
-                                        <div class="col-lg-4">
-                                            <div class="single-bottom mb-35">
-                                                <div class="trend-bottom-img mb-30">
-                                                    <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
-                                                </div>
-                                                <div class="trend-bottom-cap">
-                                                    <span class="color1"><?= $a->category ?></span>
-                                                    <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
+                                        <a href="<?= base_url('detail/artikel/' . $a->Id) ?>">
+                                            <div class="col-lg-4">
+                                                <div class="single-bottom mb-35">
+                                                    <div class="trend-bottom-img mb-30">
+                                                        <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
+                                                    </div>
+                                                    <div class="trend-bottom-cap">
+                                                        <span class="color1"><?= $a->category ?></span>
+                                                        <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     <?php
                                     }
                                 } else {
@@ -180,15 +188,17 @@
 
                             foreach ($artikel_sub_trending_2 as $b) {
                         ?>
-                                <div class="trand-right-single d-flex">
-                                    <div class="trand-right-img">
-                                        <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $b->thumbnail) ?>" alt="">
+                                <a href="<?= base_url('detail/artikel/' . $b->Id) ?>">
+                                    <div class="trand-right-single d-flex">
+                                        <div class="trand-right-img">
+                                            <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $b->thumbnail) ?>" alt="">
+                                        </div>
+                                        <div class="trand-right-cap">
+                                            <span class="color1"><?= $b->category ?></span>
+                                            <h4><a href="<?= base_url('detail/artikel/' . $b->Id) ?>"><?= $b->title ?></a></h4>
+                                        </div>
                                     </div>
-                                    <div class="trand-right-cap">
-                                        <span class="color1"><?= $b->category ?></span>
-                                        <h4><a href="<?= base_url('detail/artikel/' . $b->Id) ?>"><?= $b->title ?></a></h4>
-                                    </div>
-                                </div>
+                                </a>
                             <?php
                             }
                         } else {
@@ -230,15 +240,17 @@
                                     <?php
                                     foreach ($artikel_weekly_topnews as $c) {
                                     ?>
-                                        <div class="weekly-single">
-                                            <div class="weekly-img">
-                                                <img class="cropped-weekly-img" src="<?= base_url('uploads/artikel/' . $c->thumbnail) ?>" alt="">
+                                        <a href="<?= base_url('detail/artikel/' . $c->Id) ?>">
+                                            <div class="weekly-single">
+                                                <div class="weekly-img">
+                                                    <img class="cropped-weekly-img" src="<?= base_url('uploads/artikel/' . $c->thumbnail) ?>" alt="">
+                                                </div>
+                                                <div class="weekly-caption">
+                                                    <span class="color1"><?= $c->category ?></span>
+                                                    <h4><a href="<?= base_url('detail/artikel/' . $c->Id) ?>"><?= $c->title ?></a></h4>
+                                                </div>
                                             </div>
-                                            <div class="weekly-caption">
-                                                <span class="color1"><?= $c->category ?></span>
-                                                <h4><a href="<?= base_url('detail/artikel/' . $c->Id) ?>"><?= $c->title ?></a></h4>
-                                            </div>
-                                        </div>
+                                        </a>
                                     <?php
                                     }
                                     ?>
