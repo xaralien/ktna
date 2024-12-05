@@ -210,15 +210,6 @@
                             }
                         }
                         ?>
-                        <div class="media post_item">
-                            <img src="<?= base_url('assets/') ?>img/post/post_1.png" alt="post">
-                            <div class="media-body">
-                                <a href="single-blog.html">
-                                    <h3>From life was you fish...</h3>
-                                </a>
-                                <p>January 12, 2019</p>
-                            </div>
-                        </div>
                     </aside>
                     <!-- <aside class="single_sidebar_widget tag_cloud_widget">
                         <h4 class="widget_title">Tag Clouds</h4>

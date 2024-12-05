@@ -98,29 +98,26 @@
                         <?php
                         if ($artikel_trending_now_1) {
                         ?>
-                            <div class="trending-top mb-30">
+                            <div class="trending-top mb-30" onclick="detail(<?= $artikel_trending_now_1->Id ?>)">
                                 <div class="trend-top-img">
-                                    <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>">
-                                        <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_1->thumbnail) ?>" alt="">
-                                        <div class="trend-top-cap">
-                                            <span><?= $artikel_trending_now_1->category ?></span>
-                                            <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>"><?= $artikel_trending_now_1->title ?></a></h2>
-                                        </div>
-                                    </a>
+                                    <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_1->thumbnail) ?>" alt="">
+                                    <div class="trend-top-cap">
+                                        <span>Trending - <?= $artikel_trending_now_1->category ?></span>
+                                        <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>"><?= $artikel_trending_now_1->title ?></a></h2>
+                                    </div>
                                 </div>
                             </div>
+
                         <?php
                         } else {
                         ?>
-                            <div class="trending-top mb-30">
+                            <div class="trending-top mb-30" onclick="detail(<?= $artikel_trending_now_2->Id ?>)">
                                 <div class="trend-top-img">
-                                    <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>">
-                                        <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_2->thumbnail) ?>" alt="">
-                                        <div class="trend-top-cap">
-                                            <span><?= $artikel_trending_now_2->category ?></span>
-                                            <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>"><?= $artikel_trending_now_2->title ?></a></h2>
-                                        </div>
-                                    </a>
+                                    <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_2->thumbnail) ?>" alt="">
+                                    <div class="trend-top-cap">
+                                        <span>Trending - <?= $artikel_trending_now_2->category ?></span>
+                                        <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>"><?= $artikel_trending_now_2->title ?></a></h2>
+                                    </div>
                                 </div>
                             </div>
                         <?php
@@ -140,7 +137,7 @@
                                                         <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
                                                     </div>
                                                     <div class="trend-bottom-cap">
-                                                        <span class="color1"><?= $a->category ?></span>
+                                                        <span class="color1">Trending - <?= $a->category ?></span>
                                                         <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
                                                     </div>
                                                 </div>
@@ -158,7 +155,7 @@
                                                         <img class="cropped-img" src="<?= base_url('uploads/artikel/' . $a->thumbnail) ?>" alt="">
                                                     </div>
                                                     <div class="trend-bottom-cap">
-                                                        <span class="color1"><?= $a->category ?></span>
+                                                        <span class="color1">Trending - <?= $a->category ?></span>
                                                         <h4><a href="<?= base_url('detail/artikel/' . $a->Id) ?>"><?= $a->title ?></a></h4>
                                                     </div>
                                                 </div>
