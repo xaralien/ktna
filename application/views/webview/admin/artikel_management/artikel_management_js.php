@@ -144,7 +144,7 @@
                         },
                         success: function(data) {
                             /* if(!data.status)alert("ho"); */
-                            if (!data.status) swal.fire('Gagal menyimpan data', 'error');
+                            if (!data.status) swal.fire('Gagal menyimpan data', 'error :' + data.Pesan);
                             else {
 
                                 // document.getElementById('rumahadat').reset();

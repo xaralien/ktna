@@ -119,8 +119,8 @@ class Artikel_Management extends CI_Controller
 
         if (!$this->upload->do_upload('thumbnail')) {
             $error = $this->upload->display_errors();
-            echo $error;
-            echo json_encode(array("status" => FALSE));
+            // echo $error;
+            echo json_encode(array("status" => FALSE, "Pesan" => $error));
         } else {
             $image_data = $this->upload->data();
             $thumbnail = file_get_contents($image_data['full_path']);
