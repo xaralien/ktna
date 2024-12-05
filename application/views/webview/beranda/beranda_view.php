@@ -98,31 +98,31 @@
                         <?php
                         if ($artikel_trending_now_1) {
                         ?>
-                            <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>">
-                                <div class="trending-top mb-30">
-                                    <div class="trend-top-img">
+                            <div class="trending-top mb-30">
+                                <div class="trend-top-img">
+                                    <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>">
                                         <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_1->thumbnail) ?>" alt="">
                                         <div class="trend-top-cap">
                                             <span><?= $artikel_trending_now_1->category ?></span>
                                             <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_1->Id) ?>"><?= $artikel_trending_now_1->title ?></a></h2>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         <?php
                         } else {
                         ?>
-                            <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>">
-                                <div class="trending-top mb-30">
-                                    <div class="trend-top-img">
+                            <div class="trending-top mb-30">
+                                <div class="trend-top-img">
+                                    <a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>">
                                         <img src="<?= base_url('uploads/artikel/' . $artikel_trending_now_2->thumbnail) ?>" alt="">
                                         <div class="trend-top-cap">
                                             <span><?= $artikel_trending_now_2->category ?></span>
                                             <h2><a href="<?= base_url('detail/artikel/' . $artikel_trending_now_2->Id) ?>"><?= $artikel_trending_now_2->title ?></a></h2>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         <?php
                         }
                         ?>
