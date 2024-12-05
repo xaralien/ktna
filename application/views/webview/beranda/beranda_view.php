@@ -6,6 +6,10 @@
         /* Hide anything outside the box */
     }
 
+    .trending-top :hover {
+        cursor: pointer;
+    }
+
     .trend-bottom-img img {
         width: 100%;
         height: 100%;

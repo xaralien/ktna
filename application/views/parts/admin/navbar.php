@@ -6,7 +6,7 @@
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <a href="<?= base_url('Dashboard') ?>"><img src="<?= base_url('assets/admin') ?>/compiled/svg/logo.svg" alt="Logo" srcset=""></a>
+                            <a href="<?= base_url('Dashboard') ?>"><img style="width:50px; height:50px" src="<?= base_url('assets/') ?>img/logo/ktna.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"

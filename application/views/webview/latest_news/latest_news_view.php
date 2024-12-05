@@ -283,7 +283,9 @@
                     <!-- Flow Socail -->
                     <!-- New Poster -->
                     <div class="news-poster d-none d-lg-block">
-                        <!-- <img src="<?= base_url('assets/') ?>img/news/news_card.jpg" alt=""> -->
+                        <a href="https://kodesis.id" target="_blank">
+                            <img class="ads" src="<?= base_url('assets/img/ads/ads_01.jpg') ?>" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
