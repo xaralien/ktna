@@ -15,6 +15,11 @@
  </style>
  <section class="contact-section">
      <div class="container">
+         <div class="mb-5">
+             <a href="https://kodesis.id" target="_blank">
+                 <img class="ads-vertical" src="<?= base_url('assets/img/ads/ads_02.jpg') ?>" alt="">
+             </a>
+         </div>
          <div class="row">
              <div class="col-12">
                  <h2 class="contact-title">Get in Touch</h2>

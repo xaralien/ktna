@@ -266,59 +266,17 @@
     }
     ?>
     <!-- Whats New Start -->
-    <!-- <section class="whats-news-area pt-50 pb-20">
+    <section class="whats-news-area pt-50 pb-20">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-lg-3 col-md-3">
-                            <div class="section-tittle mb-30">
-                                <h3><a href="<?= base_url('latest_news') ?>">Whats New</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                    <div class="whats-news-caption">
-                                        <div class="row">
-                                            <?php
-                                            if ($artikel_latest) {
-                                                foreach ($artikel_latest as $al) {
-                                            ?>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="single-what-news mb-100">
-                                                            <div class="what-img">
-                                                                <img class="cropped-what-img" src="<?= base_url('uploads/artikel/') . '' . $al->thumbnail ?>" alt="">
-                                                            </div>
-                                                            <div class="what-cap">
-                                                                <span class="color1"><?= $al->category ?></span>
-                                                                <h4><a href="<?= base_url('detail/artikel/' . $al->Id) ?>"><?= $al->title ?></a></h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                <?php
-                                                }
-                                            } else {
-                                                ?>
-                                                <h4><a href="#">Tidak Ada Yang Baru</a></h4>
-
-                                            <?php
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="">
+                <a href="https://kodesis.id" target="_blank">
+                    <img class="ads-vertical" src="<?= base_url('assets/img/ads/ads_02.jpg') ?>" alt="">
+                </a>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Whats New End -->
+
     <!-- Start Youtube -->
     <div class="youtube-area video-padding">
         <div class="container">
