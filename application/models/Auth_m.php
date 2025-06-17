@@ -31,8 +31,21 @@ class Auth_m extends CI_Model
         $this->db->update('user', $data, $where);
     }
 
+
+    public function insert_ktna($data_insert)
+    {
+        $this->db->insert('user_ktna', $data_insert);
+    }
     public function update_user($data, $where1, $where2)
     {
         $this->db->update('user', $data, $where1, $where2);
+    }
+    public function get_nomor()
+    {
+        return $this->db->select('max(nomor) as max')->get('user_ktna')->row_array();
+    }
+    public function get_nomor_urut()
+    {
+        return $this->db->select('max(nomor_urut) as nomor_max')->get('user_ktna')->row_array();
     }
 }

@@ -1,0 +1,18 @@
+{
+    "dancing script": {
+        "normal": "dancing_script_normal_57f62b9db724483dd74bcf7e72f6fa14"
+    },
+    "dosis": {
+        "300": "dosis_300_1154a15344ea06e0aab23c5a26cde370"
+    },
+    "typicons": {
+        "normal": "typicons_normal_bc0568d51cb9e6626a9022e8d6866030"
+    },
+    "font awesome 5 brands": {
+        "normal": "font_awesome_5_brands_normal_b985f64debc4d8bbd94516d6609a0c41"
+    },
+    "font awesome 5 free": {
+        "normal": "C:\\xampp\\htdocs\\lsp-tanindo-master\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome_5_free_normal_acfd2581ab02b0064b403cec48d70aa5",
+        "900": "font_awesome_5_free_900_73c5e082f79f4dc06f0383d77572701f"
+    }
+}
