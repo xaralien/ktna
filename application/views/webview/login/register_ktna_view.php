@@ -18,6 +18,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
 
 </head>
+<style>
+    #my_camera {
+        width: 390px;
+        height: 450px;
+        /* Other styles like border */
+    }
+
+    /* THIS IS THE CRUCIAL PART FOR THE LIVE VIDEO FEED */
+    #my_camera video {
+        width: 100%;
+        /* Force the video to take 100% width of its parent (#my_camera) */
+        height: 100%;
+        /* Force the video to take 100% height of its parent (#my_camera) */
+        object-fit: cover;
+        /* This is what crops the video to fit the aspect ratio */
+        display: block;
+        /* Ensures no extra space/margins around the video */
+    }
+
+    /* Style for the captured image (from previous answer) */
+    .captured-image {
+        width: 390px;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+        border: 1px solid #ccc;
+    }
+</style>
 
 <body>
     <script src="<?= base_url() ?>assets/cms/static/js/initTheme.js"></script>
@@ -182,7 +210,7 @@
 
                         <div class="form-group mb-4">
                             <label for="my_camera" class="form-label">Ambil Foto Profil</label>
-                            <div id="my_camera" class="mb-3" style="width:320px; height:240px; border:1px solid black;"></div>
+                            <div id="my_camera" class="mb-3" style="width:390px; height:450px; border:1px solid black;"></div>
                             <input type="button" value="Take Snapshot" onClick="take_snapshot()" class="btn btn-secondary mt-2">
                             <input type="hidden" name="image" class="image-tag">
                             <div id="results" class="mt-3">Your captured image will appear here...</div>

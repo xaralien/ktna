@@ -2,10 +2,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script language="JavaScript">
     Webcam.set({
-        // width: 260,
-        height: 300,
+        width: 390, // This sets the target width for the captured image data AND the preview
+        height: 450, // This sets the target height for the captured image data AND the preview
+        crop_width: 390, // This tells Webcam.js to crop the captured image to this width
+        crop_height: 450, // This tells Webcam.js to crop the captured image to this height
         image_format: 'jpeg',
-        jpeg_quality: 90
+        jpeg_quality: 100
     });
 
     Webcam.attach('#my_camera');
@@ -13,7 +15,9 @@
     function take_snapshot() {
         Webcam.snap(function(data_uri) {
             $(".image-tag").val(data_uri);
-            document.getElementById('results').innerHTML = '<img src="' + data_uri + '" height="300" width="auto"/>';
+            // For displaying the captured image, setting width/height directly on <img> is fine,
+            // but ensure it also has object-fit: cover for visual consistency if needed
+            document.getElementById('results').innerHTML = '<img src="' + data_uri + '" width="390" height="450" class="captured-image"/>';
         });
     }
 </script>

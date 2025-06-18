@@ -163,9 +163,7 @@ class Beranda extends CI_Controller
     public function cek_kartu()
     {
         $data['title'] = 'Cek Kartu KTNA';
-        // $this->load->view('statis_template/auth_header', $data);
         $this->load->view('beranda/kartu_ktna');
-        // $this->load->view('statis_template/auth_footer');
     }
     public function buat_kartu($nik)
     {
@@ -177,19 +175,20 @@ class Beranda extends CI_Controller
 
         $data['title'] = "Kartu KTNA";
 
-        $html = $this->load->view('webview/beranda/kartu_ktna', $data, true);
+        // $this->load->view('webview/beranda/kartu_ktna', $data, true);
+        $this->load->view('webview/beranda/kartu_ktna', $data);
 
 
         // PDF settings
-        $file_pdf = 'kartu_ktna_';
-        $paper = 'A4';
-        $orientation = "landscape";
+        // $file_pdf = 'kartu_ktna_';
+        // $paper = 'A4';
+        // $orientation = "landscape";
 
         // Generate PDF
         // $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
-        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation, TRUE);
-
-        redirect('beranda');
+        // $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation, TRUE);
+        // $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation, 'I');
+        // redirect('beranda');
     }
 
     public function detail_user($nomor_urut)
