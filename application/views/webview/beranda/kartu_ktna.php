@@ -277,7 +277,8 @@
 
         .back-address-block {
             position: absolute;
-            bottom: 65px;
+            /* bottom: 65px; */
+            bottom: 40px;
             /* Keep your desired bottom position */
             width: 250px;
             /* Keep your desired width */
@@ -431,12 +432,12 @@
                 Telp: 021 - 7826084
             </div>
 
-            <div class="emoney-block">
+            <!-- <div class="emoney-block">
                 <div class="back-emoney-number">6032 9828 0000 0000</div>
                 <div class="emoney-logo">
                     <img src="<?= base_url('assets/images/e-money.png') ?>" alt="e-Money Logo">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>
