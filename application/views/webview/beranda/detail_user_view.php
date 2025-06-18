@@ -277,7 +277,7 @@
     </section>
     <!-- Whats New End -->
 
-    <section class="py-5" id="partners">
+    <section class="py-5" id="details">
         <div class="container">
             <div class="row justify-content-center align-items-center">
 
@@ -328,6 +328,58 @@
                                 <div class="row mb-3">
                                     <div class="col-md-4 text-md-left font-weight-bold">Nomor Telpon:</div>
                                     <div class="col-md-8 text-md-left"><?= htmlspecialchars($user->nomor_hp ?? 'N/A') ?></div>
+                                </div>
+                                <?php
+
+                                // Assume $user->provinsi holds the selected province code, e.g., '01'
+                                // If $user->provinsi is not set, default to an empty string.
+                                $selectedProvinceCode = $user->provinsi ?? '';
+
+                                // Create an associative array mapping province codes to their names
+                                $provinces = [
+                                    '01' => 'Aceh',
+                                    '02' => 'Sumatera Utara',
+                                    '03' => 'Sumatera Barat',
+                                    '04' => 'Riau',
+                                    '05' => 'Jambi',
+                                    '06' => 'Sumatera Selatan',
+                                    '07' => 'Bengkulu',
+                                    '08' => 'Lampung',
+                                    '09' => 'Kep. Bangka Belitung',
+                                    '10' => 'Kep. Riau',
+                                    '11' => 'Jakarta',
+                                    '12' => 'Jawa Barat',
+                                    '13' => 'Jawa Tengah',
+                                    '14' => 'Banten',
+                                    '15' => 'Jawa Timur',
+                                    '16' => 'Yogyakarta',
+                                    '17' => 'Bali',
+                                    '18' => 'Nusa Tenggara Barat',
+                                    '19' => 'Nusa Tenggara Timur',
+                                    '20' => 'Kalimantan Barat',
+                                    '21' => 'Kalimantan Tengah',
+                                    '22' => 'Kalimantan Selatan',
+                                    '23' => 'Kalimantan Timur',
+                                    '24' => 'Kalimantan Utara',
+                                    '25' => 'Sulawesi Utara',
+                                    '26' => 'Sulawesi Tengah',
+                                    '27' => 'Sulawesi Selatan',
+                                    '28' => 'Sulawesi Tenggara',
+                                    '29' => 'Gorontalo',
+                                    '30' => 'Sulawesi Barat',
+                                    '31' => 'Maluku',
+                                    '32' => 'Maluku Utara',
+                                    '33' => 'Papua',
+                                    '34' => 'Papua Barat',
+                                ];
+
+                                // Get the province name using the selected code, or 'N/A' if not found
+                                $provinceName = $provinces[$selectedProvinceCode] ?? 'N/A';
+
+                                ?>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 text-md-left font-weight-bold">Provinsi:</div>
+                                    <div class="col-md-8 text-md-left"><?= htmlspecialchars($provinceName) ?></div>
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-4 text-md-left font-weight-bold">Alamat:</div>
