@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="form-group position-relative has-icon-left mb-4">
-                            <label for="tanggal_lahir_group" class="form-label">Tanggal Lahir (Format : Tahun - Bulan - Tanggal)</label>
+                            <label for="tanggal_lahir_group" class="form-label">Tanggal Lahir (Format : Tanggal - Bulan - Tahun)</label>
                             <div class="form-control-icon" style="top: 2.2rem;">
                                 <i class="bi bi-calendar"></i>
                             </div>
