@@ -129,14 +129,15 @@
                                 <i class="bi bi-calendar"></i>
                             </div>
                             <div class="row" id="tanggal_lahir_group">
-                                <div class="col-lg-4 mb-2 mb-lg-0"> <input type="number" class="form-control form-control-xl" id="tahun_lahir" name="tahun_lahir" value="<?= set_value('tahun_lahir'); ?>" placeholder="1997" min="1900" max="3000">
+                                <div class="col-lg-4">
+                                    <input type="number" class="form-control form-control-xl" id="tanggal_lahir" name="tanggal_lahir" value="<?= set_value('tanggal_lahir'); ?>" placeholder="07" min="1" max="31">
                                 </div>
                                 <div class="col-lg-4 mb-2 mb-lg-0">
                                     <input type="number" class="form-control form-control-xl" id="bulan_lahir" name="bulan_lahir" value="<?= set_value('bulan_lahir'); ?>" placeholder="08" min="1" max="12">
                                 </div>
-                                <div class="col-lg-4">
-                                    <input type="number" class="form-control form-control-xl" id="tanggal_lahir" name="tanggal_lahir" value="<?= set_value('tanggal_lahir'); ?>" placeholder="07" min="1" max="31">
+                                <div class="col-lg-4 mb-2 mb-lg-0"> <input type="number" class="form-control form-control-xl" id="tahun_lahir" name="tahun_lahir" value="<?= set_value('tahun_lahir'); ?>" placeholder="1997" min="1900" max="3000">
                                 </div>
+
                             </div>
                             <?= form_error('tahun_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                             <?= form_error('bulan_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
